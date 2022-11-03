@@ -1,0 +1,11 @@
+<launch>
+
+  <node pkg="barn_challenge" type="gap_detection" name="gap_navigation" output="screen">
+    <param name="gapThresh" value=".5" />
+  </node>
+ 
+  <node pkg="competition" type="deepest_gap_finder.py" name="global_planner" output="screen"> </node>
+
+  <node pkg="competition" type="gotogoal.py" name="controller" output="screen"> </node>  
+
+</launch>
